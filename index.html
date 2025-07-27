@@ -5,64 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siddaraj Salakki | DevOps Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #1e1e1e url('https://www.transparenttextures.com/patterns/cubes.png');
-      color: #f0f0f0;
+      background: #1a1a1a url('https://www.transparenttextures.com/patterns/hexellence.png');
+      background-repeat: repeat;
+      color: #f3f3f3;
     }
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: auto;
       padding: 2rem;
     }
     header {
       text-align: center;
-      padding: 3rem 1rem;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 10px;
+      margin-bottom: 2rem;
     }
-    header h1 { 
+    header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
       color: #00f5d4;
     }
     header p {
       font-size: 1.1rem;
       color: #ccc;
     }
-    .section {
-      margin-top: 3rem;
+    .social {
+      margin-top: 0.5rem;
     }
-    h2 {
+    .social a {
       color: #00f5d4;
-      border-bottom: 1px solid #444;
-      padding-bottom: 0.5rem;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1.2rem;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #00f5d4;
+      margin-bottom: 2rem;
     }
-    li {
-      margin-bottom: 0.75rem;
+    .tab {
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-bottom: none;
+      color: #fff;
     }
-    .project-card {
-      background: #2a2a2a;
-      padding: 1rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      border-left: 4px solid #00f5d4;
+    .tab.active {
+      background: #00f5d4;
+      color: #1a1a1a;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #aaa;
+    .tab-content {
+      display: none;
     }
-    .icons i {
+    .tab-content.active {
+      display: block;
+    }
+    .skill-item, .project-item {
+      margin-bottom: 1.5rem;
+    }
+    .skill-item i {
       margin-right: 10px;
       color: #00f5d4;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border-radius: 4px;
+      border: none;
+    }
+    button {
+      background: #00f5d4;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      color: #1a1a1a;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -70,74 +91,60 @@
   <div class="container">
     <header>
       <h1>Siddaraj Salakki</h1>
-      <p>DevOps Engineer | Cloud Infrastructure | CI/CD Automation</p>
-      <p class="icons">
-        <a href="#" style="color:#00f5d4;"><i class="fab fa-github"></i></a>
-        <a href="#" style="color:#00f5d4;"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:siddaraj@example.com" style="color:#00f5d4;"><i class="fas fa-envelope"></i></a>
-      </p>
+      <p>DevOps Engineer | Cloud Infrastructure | CI/CD Enthusiast</p>
+      <div class="social">
+        <a href="mailto:siddaraj@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/siddaraj" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/siddaraj" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
     </header>
 
-    <section class="section">
-      <h2>Professional Summary</h2>
-      <p>Results-driven DevOps Engineer with 3+ years of experience automating and optimizing deployments using Jenkins, Terraform, Docker, and Ansible. Skilled in AWS, Linux, and proactive monitoring to enhance deployment efficiency and stability.</p>
-    </section>
+    <div class="tabs">
+      <div class="tab active" onclick="showTab(0)">Tools & Skills</div>
+      <div class="tab" onclick="showTab(1)">Projects</div>
+      <div class="tab" onclick="showTab(2)">Contact</div>
+    </div>
 
-    <section class="section">
-      <h2>Skills & Tools</h2>
-      <ul>
-        <li>AWS (EC2, IAM, VPC), Azure</li>
-        <li>Terraform, Ansible, Docker, Kubernetes (EKS)</li>
-        <li>Jenkins, GitHub Actions, Git</li>
-        <li>Prometheus, Grafana, CloudWatch, Nagios</li>
-        <li>Linux (Ubuntu/CentOS), Bash, Python</li>
-      </ul>
-    </section>
+    <div class="tab-content active">
+      <div class="skill-item"><i class="fab fa-aws"></i> <strong>AWS:</strong> EC2, S3, IAM, VPC – hands-on provisioning and management</div>
+      <div class="skill-item"><i class="fas fa-code-branch"></i> <strong>CI/CD:</strong> Jenkins, GitHub Actions – pipeline automation, GitOps</div>
+      <div class="skill-item"><i class="fas fa-server"></i> <strong>IaC:</strong> Terraform, Ansible – modular configs and provisioning</div>
+      <div class="skill-item"><i class="fab fa-docker"></i> <strong>Containers:</strong> Docker, Kubernetes (EKS basics)</div>
+      <div class="skill-item"><i class="fas fa-chart-line"></i> <strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch, Nagios</div>
+      <div class="skill-item"><i class="fab fa-linux"></i> <strong>Linux/Scripting:</strong> Bash (advanced), Python (basic), Ubuntu/CentOS</div>
+    </div>
 
-    <section class="section">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <strong>EKS GitOps Deployment</strong><br />
-        Provisioned AWS EKS using Terraform, managed GitOps with ArgoCD and Git-based versioning.
+    <div class="tab-content">
+      <div class="project-item">
+        <h3>CI/CD Automation Pipelines</h3>
+        <p>Built scalable GitHub Actions & Jenkins pipelines for Dev, QA, and Production environments with Terraform and Ansible.</p>
       </div>
-      <div class="project-card">
-        <strong>CI/CD Pipelines for Microservices</strong><br />
-        Built Jenkins/GitHub Actions pipelines with Terraform and Ansible for multi-region automation.
+      <div class="project-item">
+        <h3>Monitoring Stack Integration</h3>
+        <p>Integrated Prometheus + Grafana dashboards to monitor AWS services and reduce alert response time by 30%.</p>
       </div>
-      <div class="project-card">
-        <strong>Monitoring Stack Setup</strong><br />
-        Integrated Prometheus + Grafana to monitor AWS workloads, improving response by 30%.
-      </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <h2>Experience</h2>
-      <h4>DevOps Engineer – Company 1 (2 years)</h4>
-      <ul>
-        <li>Built CI/CD pipelines with Jenkins & GitHub Actions</li>
-        <li>Managed AWS infra with modular Terraform</li>
-        <li>Automated provisioning with Ansible</li>
-        <li>Configured monitoring via Prometheus + Grafana</li>
-        <li>Streamlined Docker-based delivery</li>
-      </ul>
-
-      <h4>DevOps Intern – Company 2 (1 year)</h4>
-      <ul>
-        <li>Maintained Linux systems and AWS CloudWatch alerts</li>
-        <li>Integrated static scans (Trivy) into CI pipelines</li>
-        <li>Containerized legacy apps, reducing usage by 40%</li>
-        <li>Implemented GitOps-based flow for QA</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Education</h2>
-      <p>B.Tech in Computer Science — XYZ University (2019)</p>
-    </section>
-
-    <footer>
-      &copy; 2025 Siddaraj Salakki — All rights reserved.
-    </footer>
+    <div class="tab-content">
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="Your Name" />
+        <label>Email</label>
+        <input type="email" placeholder="Your Email" />
+        <label>Message</label>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.tab');
+      const contents = document.querySelectorAll('.tab-content');
+      tabs.forEach((t, i) => t.classList.toggle('active', i === index));
+      contents.forEach((c, i) => c.classList.toggle('active', i === index));
+    }
+  </script>
 </body>
 </html>
