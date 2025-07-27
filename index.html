@@ -1,91 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siddaraj Salakki | DevOps Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2rem;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background: #1e1e1e url('https://www.transparenttextures.com/patterns/cubes.png');
+      color: #f0f0f0;
     }
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
-      background: #fff;
       padding: 2rem;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    h1, h2 {
-      color: #1e90ff;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #00f5d4;
     }
-    ul {
-      padding-left: 20px;
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
     }
     .section {
-      margin-bottom: 2rem;
+      margin-top: 3rem;
+    }
+    h2 {
+      color: #00f5d4;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 0.75rem;
+    }
+    .project-card {
+      background: #2a2a2a;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border-left: 4px solid #00f5d4;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+    }
+    .icons i {
+      margin-right: 10px;
+      color: #00f5d4;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Siddaraj Salakki</h1>
-    <p><strong>DevOps Engineer</strong> | 3+ years experience | Bangalore, India</p>
-    <p>Email: siddaraj@example.com | GitHub: github.com/siddaraj | LinkedIn: linkedin.com/in/siddaraj</p>
+    <header>
+      <h1>Siddaraj Salakki</h1>
+      <p>DevOps Engineer | Cloud Infrastructure | CI/CD Automation</p>
+      <p class="icons">
+        <a href="#" style="color:#00f5d4;"><i class="fab fa-github"></i></a>
+        <a href="#" style="color:#00f5d4;"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:siddaraj@example.com" style="color:#00f5d4;"><i class="fas fa-envelope"></i></a>
+      </p>
+    </header>
 
-    <div class="section">
+    <section class="section">
       <h2>Professional Summary</h2>
-      <p>Experienced DevOps Engineer skilled in cloud platforms (AWS, Azure), IaC (Terraform, Ansible), CI/CD (Jenkins, GitHub Actions), and monitoring (Prometheus, Grafana). Strong in Linux, scripting (Bash), and cloud automation. Proven ability to deliver scalable infrastructure and robust pipelines. Seeking to contribute to impactful DevOps projects.</p>
-    </div>
+      <p>Results-driven DevOps Engineer with 3+ years of experience automating and optimizing deployments using Jenkins, Terraform, Docker, and Ansible. Skilled in AWS, Linux, and proactive monitoring to enhance deployment efficiency and stability.</p>
+    </section>
 
-    <div class="section">
-      <h2>Skills</h2>
+    <section class="section">
+      <h2>Skills & Tools</h2>
       <ul>
-        <li>AWS (EC2, S3, IAM, VPC), Azure</li>
-        <li>Terraform, Ansible, GitHub Actions, Jenkins</li>
-        <li>Docker, Kubernetes, EKS</li>
+        <li>AWS (EC2, IAM, VPC), Azure</li>
+        <li>Terraform, Ansible, Docker, Kubernetes (EKS)</li>
+        <li>Jenkins, GitHub Actions, Git</li>
         <li>Prometheus, Grafana, CloudWatch, Nagios</li>
-        <li>Linux (Ubuntu, CentOS), Bash, Python</li>
+        <li>Linux (Ubuntu/CentOS), Bash, Python</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Experience</h2>
-      <h3>Company 1 — DevOps Engineer (2 years)</h3>
-      <ul>
-        <li>Designed CI/CD pipelines for 10+ microservices using Jenkins and GitHub Actions</li>
-        <li>Provisioned AWS infra via Terraform (modular + remote state)</li>
-        <li>Automated Ansible playbooks for multi-region deployment</li>
-        <li>Setup Prometheus-Grafana stack for proactive monitoring</li>
-        <li>Collaborated with developers on Docker-based rollout</li>
-      </ul>
-      <h3>Company 2 — DevOps Intern (1 year)</h3>
-      <ul>
-        <li>Maintained Linux systems and configured alerts with CloudWatch</li>
-        <li>Integrated Trivy static scan in CI</li>
-        <li>Dockerized legacy tools to improve delivery by 40%</li>
-        <li>Built GitOps flow for QA environments</li>
-        <li>Documented deployment processes for handoff</li>
-      </ul>
-    </div>
-
-    <div class="section">
+    <section class="section">
       <h2>Projects</h2>
-      <ul>
-        <li><strong>AWS Infra-as-Code Repo:</strong> Modular Terraform for multi-tier setup</li>
-        <li><strong>GitOps Demo:</strong> GitHub Actions + ArgoCD deploy from Git commit</li>
-      </ul>
-    </div>
+      <div class="project-card">
+        <strong>EKS GitOps Deployment</strong><br />
+        Provisioned AWS EKS using Terraform, managed GitOps with ArgoCD and Git-based versioning.
+      </div>
+      <div class="project-card">
+        <strong>CI/CD Pipelines for Microservices</strong><br />
+        Built Jenkins/GitHub Actions pipelines with Terraform and Ansible for multi-region automation.
+      </div>
+      <div class="project-card">
+        <strong>Monitoring Stack Setup</strong><br />
+        Integrated Prometheus + Grafana to monitor AWS workloads, improving response by 30%.
+      </div>
+    </section>
 
-    <div class="section">
+    <section class="section">
+      <h2>Experience</h2>
+      <h4>DevOps Engineer – Company 1 (2 years)</h4>
+      <ul>
+        <li>Built CI/CD pipelines with Jenkins & GitHub Actions</li>
+        <li>Managed AWS infra with modular Terraform</li>
+        <li>Automated provisioning with Ansible</li>
+        <li>Configured monitoring via Prometheus + Grafana</li>
+        <li>Streamlined Docker-based delivery</li>
+      </ul>
+
+      <h4>DevOps Intern – Company 2 (1 year)</h4>
+      <ul>
+        <li>Maintained Linux systems and AWS CloudWatch alerts</li>
+        <li>Integrated static scans (Trivy) into CI pipelines</li>
+        <li>Containerized legacy apps, reducing usage by 40%</li>
+        <li>Implemented GitOps-based flow for QA</li>
+      </ul>
+    </section>
+
+    <section class="section">
       <h2>Education</h2>
       <p>B.Tech in Computer Science — XYZ University (2019)</p>
-    </div>
+    </section>
+
+    <footer>
+      &copy; 2025 Siddaraj Salakki — All rights reserved.
+    </footer>
   </div>
 </body>
 </html>
