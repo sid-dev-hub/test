@@ -2,149 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siddaraj Salakki | DevOps Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #1a1a1a url('https://www.transparenttextures.com/patterns/hexellence.png');
-      background-repeat: repeat;
-      color: #f3f3f3;
-    }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #00f5d4;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #ccc;
-    }
-    .social {
-      margin-top: 0.5rem;
-    }
-    .social a {
-      color: #00f5d4;
-      margin: 0 10px;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-    .tabs {
-      display: flex;
-      border-bottom: 2px solid #00f5d4;
-      margin-bottom: 2rem;
-    }
-    .tab {
-      padding: 0.75rem 1.5rem;
-      cursor: pointer;
-      background: #1f1f1f;
-      border: 1px solid #333;
-      border-bottom: none;
-      color: #fff;
-    }
-    .tab.active {
-      background: #00f5d4;
-      color: #1a1a1a;
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    .skill-item, .project-item {
-      margin-bottom: 1.5rem;
-    }
-    .skill-item i {
-      margin-right: 10px;
-      color: #00f5d4;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin: 0.5rem 0;
-      border-radius: 4px;
-      border: none;
-    }
-    button {
-      background: #00f5d4;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      cursor: pointer;
-      color: #1a1a1a;
-      border-radius: 4px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <h1>Siddaraj Salakki</h1>
-      <p>DevOps Engineer | Cloud Infrastructure | CI/CD Enthusiast</p>
-      <div class="social">
-        <a href="mailto:siddaraj@example.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/siddaraj" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/siddaraj" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </header>
+<body class="bg-gray-900 text-white font-sans min-h-screen">
 
-    <div class="tabs">
-      <div class="tab active" onclick="showTab(0)">Tools & Skills</div>
-      <div class="tab" onclick="showTab(1)">Projects</div>
-      <div class="tab" onclick="showTab(2)">Contact</div>
-    </div>
+  <!-- Top Section -->
+  <header class="text-center py-10 bg-gray-800 shadow">
+    <h1 class="text-4xl font-bold">Siddaraj Salakki</h1>
+    <p class="text-lg text-gray-400 mt-2">DevOps Engineer | Cloud Enthusiast</p>
 
-    <div class="tab-content active">
-      <div class="skill-item"><i class="fab fa-aws"></i> <strong>AWS:</strong> EC2, S3, IAM, VPC – hands-on provisioning and management</div>
-      <div class="skill-item"><i class="fas fa-code-branch"></i> <strong>CI/CD:</strong> Jenkins, GitHub Actions – pipeline automation, GitOps</div>
-      <div class="skill-item"><i class="fas fa-server"></i> <strong>IaC:</strong> Terraform, Ansible – modular configs and provisioning</div>
-      <div class="skill-item"><i class="fab fa-docker"></i> <strong>Containers:</strong> Docker, Kubernetes (EKS basics)</div>
-      <div class="skill-item"><i class="fas fa-chart-line"></i> <strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch, Nagios</div>
-      <div class="skill-item"><i class="fab fa-linux"></i> <strong>Linux/Scripting:</strong> Bash (advanced), Python (basic), Ubuntu/CentOS</div>
+    <div class="mt-4 flex justify-center space-x-4 text-gray-300">
+      <a href="mailto:youremail@example.com" class="hover:text-white">Email</a>
+      <a href="https://github.com/yourgithub" class="hover:text-white">GitHub</a>
+      <a href="https://linkedin.com/in/yourlinkedin" class="hover:text-white">LinkedIn</a>
     </div>
+  </header>
 
-    <div class="tab-content">
-      <div class="project-item">
-        <h3>CI/CD Automation Pipelines</h3>
-        <p>Built scalable GitHub Actions & Jenkins pipelines for Dev, QA, and Production environments with Terraform and Ansible.</p>
-      </div>
-      <div class="project-item">
-        <h3>Monitoring Stack Integration</h3>
-        <p>Integrated Prometheus + Grafana dashboards to monitor AWS services and reduce alert response time by 30%.</p>
-      </div>
+  <!-- Rectangular Tabs -->
+  <nav class="bg-gray-700 shadow-md">
+    <div class="flex justify-center space-x-4 py-3">
+      <a href="#about" class="bg-gray-800 hover:bg-gray-600 px-4 py-2 rounded text-white font-medium">About</a>
+      <a href="#resume" class="bg-gray-800 hover:bg-gray-600 px-4 py-2 rounded text-white font-medium">Resume</a>
+      <a href="#portfolio" class="bg-gray-800 hover:bg-gray-600 px-4 py-2 rounded text-white font-medium">Portfolio</a>
+      <a href="#contact" class="bg-gray-800 hover:bg-gray-600 px-4 py-2 rounded text-white font-medium">Contact</a>
     </div>
+  </nav>
 
-    <div class="tab-content">
-      <form>
-        <label>Name</label>
-        <input type="text" placeholder="Your Name" />
-        <label>Email</label>
-        <input type="email" placeholder="Your Email" />
-        <label>Message</label>
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+<body class="bg-gray-900 text-white font-sans min-h-screen scroll-smooth">
+
+  <!-- (Header and Nav from Step 1 stay the same) -->
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 bg-gray-900 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">About</h2>
+   <p class="text-gray-300 text-lg leading-relaxed">
+    I'm a DevOps Engineer with 3+ years of experience in designing, automating, and maintaining cloud infrastructure. I specialize in streamlining CI/CD workflows, implementing Infrastructure as Code using Terraform and Ansible, and managing scalable cloud environments on AWS.
+  </p>
+
+  <p class="text-gray-300 text-lg mt-4 leading-relaxed">
+    I've worked with Jenkins, GitHub Actions, Docker, and Kubernetes (EKS), building pipelines that reduce deployment time and boost reliability. My strengths lie in automation, observability, and building systems that are stable, secure, and maintainable.
+  </p>
+
+  <p class="text-gray-300 text-lg mt-4 leading-relaxed">
+    Whether it's optimizing Docker images, writing Bash scripts, or integrating monitoring with Prometheus and Grafana, I focus on solutions that scale. I’m also comfortable troubleshooting production issues and enhancing cloud performance and cost efficiency.
+  </p>
+
+  <p class="text-gray-300 text-lg mt-4 leading-relaxed">
+    My career goal is to grow into a Cloud Platform Engineer role where I can design scalable systems, mentor others, and contribute to infrastructure decisions that enable high-performing teams.
+  </p>
+  </section>
+
+<hr class="my-16 border-gray-700">
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-24 px-6 bg-gray-800 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Resume</h2>
+    <p class="text-gray-300">Download my latest resume <a href="#" class="underline text-blue-400 hover:text-blue-200">here</a>.</p>
+  </section>
+
+<hr class="my-16 border-gray-700">
+
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-24 px-6 bg-gray-900 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Portfolio</h2>
+    <p class="text-gray-300 mb-4">Here are some of my recent certifications and DevOps projects.</p>
+    <!-- You can add project cards here -->
+<div class="grid md:grid-cols-2 gap-6 mt-6">
+  <!-- Card 1 -->
+<div class="bg-gray-800 p-6 rounded-xl shadow transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-700">
+    <h3 class="text-xl font-semibold text-white">AWS Infrastructure Setup</h3>
+    <p class="text-gray-400 mt-2">Designed and deployed scalable infrastructure using EC2, S3, IAM, and VPC for a client project.</p>
+    <p class="text-sm text-gray-500 mt-2">Tech: AWS, Terraform, Ansible</p>
+    <a href="https://github.com/yourrepo" class="text-blue-400 hover:text-blue-200 text-sm mt-2 inline-block">View Project</a>
   </div>
 
-  <script>
-    function showTab(index) {
-      const tabs = document.querySelectorAll('.tab');
-      const contents = document.querySelectorAll('.tab-content');
-      tabs.forEach((t, i) => t.classList.toggle('active', i === index));
-      contents.forEach((c, i) => c.classList.toggle('active', i === index));
-    }
-  </script>
+  <!-- Card 2 -->
+  <div class="bg-gray-800 p-6 rounded-xl shadow transform transition duration-300 hover:scale-105 hover:shadow-xl hover:bg-gray-700">
+    <h3 class="text-xl font-semibold text-white">CI/CD with Jenkins</h3>
+    <p class="text-gray-400 mt-2">Built a CI/CD pipeline using Jenkins and GitHub Actions for automated deployment and testing.</p>
+    <p class="text-sm text-gray-500 mt-2">Tech: Jenkins, GitHub Actions, Docker</p>
+    <a href="https://github.com/yourrepo" class="text-blue-400 hover:text-blue-200 text-sm mt-2 inline-block">View Project</a>
+  </div>
+
+  <!-- Add more cards similarly -->
+</div>
+
+
+
+  </section>
+
+<hr class="my-16 border-gray-700">
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6 bg-gray-800 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Contact</h2>
+    <p class="text-gray-300">Feel free to reach out via <a href="mailto:youremail@example.com" class="underline text-blue-400 hover:text-blue-200">email</a>.</p>
+
+<form class="max-w-xl mx-auto mt-8 space-y-4">
+  <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  
+  <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+  
+  <textarea rows="5" placeholder="Your Message" class="w-full px-4 py-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+  
+  <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded text-white font-semibold">Send</button>
+</form>
+
+  </section>
+
+</body>
+
+
 </body>
 </html>
